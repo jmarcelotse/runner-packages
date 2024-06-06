@@ -14,6 +14,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Instalação do FFMPEG
+        run: |
+          sudo apt update -y
+          sudo apt install ffmpeg -y
       - name: Executar FFMPEG
         run: |
           ffmpeg --help
